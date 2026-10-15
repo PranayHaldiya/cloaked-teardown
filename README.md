@@ -166,7 +166,7 @@ The web app also uses a passkey assertion with a browser-generated challenge for
 
 ## Disclosure
 
-*[Placeholder: record here when Cloaked was notified, and any reply, before publishing.]*
+This write-up covers design choices and documentation gaps, not exploitable vulnerabilities, and Cloaked was not contacted before it was published. All findings come from public client files; nothing was tested against Cloaked's servers. If anything here is wrong, please open an issue and I'll correct it.
 
 ## About
 
