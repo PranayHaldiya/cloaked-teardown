@@ -31,7 +31,7 @@ const VAULT_KEY: Profile = Profile {
 };
 const LOGIN_KEY: Profile = Profile {
     name: "cloaked login key",
-    note: "secret box key -> auth key sent to the server",
+    note: "secret box key -> auth key (the password the server sees)",
     memory_kib: KIB_64MIB,
     passes: 5,
     lanes: 4,
@@ -40,9 +40,9 @@ const LOGIN_KEY: Profile = Profile {
 const COMPARISONS: [Profile; 3] = [
     Profile {
         name: "bitwarden default",
-        note: "Argon2id default in Bitwarden clients",
-        memory_kib: KIB_64MIB,
-        passes: 3,
+        note: "Bitwarden help center, Oct 2026: 32 MiB, 6 iterations, 4 threads",
+        memory_kib: 32 * 1024,
+        passes: 6,
         lanes: 4,
     },
     Profile {

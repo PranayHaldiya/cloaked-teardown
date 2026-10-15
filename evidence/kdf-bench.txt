@@ -2,11 +2,11 @@ Single-threaded CPU time per guess (median of 7).
 memory x passes is the hardware-independent cost an attacker pays.
 
 profile                  memory passes  lanes  median ms     m x t  note
-cloaked vault key         64MiB      1      4       34.4      1.0x  password -> secret box key (unwraps the private key)
-cloaked login key         64MiB      5      4      161.5      5.0x  secret box key -> auth key sent to the server
-bitwarden default         64MiB      3      4       98.8      3.0x  Argon2id default in Bitwarden clients
-rfc 9106 (64 MiB)         64MiB      3      4       98.9      3.0x  RFC 9106 second recommended option
-owasp minimum             46MiB      1      1       24.4      0.7x  OWASP Password Storage Cheat Sheet, m=46 MiB t=1 p=1
+cloaked vault key         64MiB      1      4       34.7      1.0x  password -> secret box key (unwraps the private key)
+cloaked login key         64MiB      5      4      161.9      5.0x  secret box key -> auth key (the password the server sees)
+bitwarden default         32MiB      6      4       93.8      3.0x  Bitwarden help center, Oct 2026: 32 MiB, 6 iterations, 4 threads
+rfc 9106 (64 MiB)         64MiB      3      4       99.4      3.0x  RFC 9106 second recommended option
+owasp minimum             46MiB      1      1       24.2      0.7x  OWASP Password Storage Cheat Sheet, m=46 MiB t=1 p=1
 
 An attacker with a database copy verifies guesses through the cheapest path.
 The server stores the private key wrapped by the vault key, so the cheapest

@@ -48,7 +48,7 @@ procedure_assembly     procedure=0x216f60   # makeArgon2IDHash: maps caller regi
 
 The Go register ABI on amd64 passes integer arguments in `RAX, RBX, RCX, RDI, RSI, R8, R9, R10, R11`. `makeArgon2IDHash(password, salt []byte, memory, time uint32, threads uint8, keyLen uint32)` takes `memory` in R9, `time` in R10, `threads` in R11 and `keyLen` on the stack. [`evidence/key-derivation.md`](evidence/key-derivation.md) lists every call site.
 
-Addresses are for the x86_64 library with SHA-256 `553fc3b0…6fbe`. For another build, search by function name instead.
+Addresses are Ghidra program addresses (image base `0x100000`) for the x86_64 library with SHA-256 `553fc3b0…6fbe`. Subtract `0x100000` to use them with `objdump --start-address`. For another build, search by function name instead.
 
 ## 4. Confirm at runtime in the browser builds
 

@@ -19,8 +19,8 @@ All three clients were downloaded on 2026-10-15 and studied locally. No Cloaked 
 
 | Client | Toolchain | Notes |
 |---|---|---|
-| Extension | go1.21.0 (Aug 2023), `GOOS=js GOARCH=wasm` | Loaded through Go's `wasm_exec` shim |
-| Web | go1.21.0, `GOOS=js GOARCH=wasm` | Different build from the extension, but the same exported API and identical outputs |
-| Android | go1.25.2, gomobile (`gobind`), golang.org/x/crypto v0.42.0, x/mobile 2025-09-11 | Built without `-trimpath`, so the build info contains a developer's local file paths. They're omitted here. |
+| Extension | go1.21.0 (Aug 2023), `GOOS=js GOARCH=wasm` | Loaded through Go's `wasm_exec` shim; the embedded source paths point to a GitHub Actions runner (`/home/runner/work/encryption-sdk/…`) |
+| Web | go1.21.0, `GOOS=js GOARCH=wasm` | Different build from the extension (also built on CI), but the same exported API and identical outputs |
+| Android | go1.25.2, gomobile (`gobind`), golang.org/x/crypto v0.42.0, x/mobile 2025-09-11 | Built without `-trimpath`. The build info contains a local home-directory path, which suggests a developer machine rather than CI. It's omitted here. |
 
 The Go module is `github.com/cloakedinc/encryption-sdk` (private). The Android bindings name it `mando_mobile`.

@@ -2,6 +2,8 @@
 
 Source of truth: Android `libgojnx.so` for x86_64 (SHA-256 `553fc3b0…6fbe`), analyzed with Ghidra 12.1.2 through REA 6.5.0. Go kept its symbol names, so the functions below are named exactly as in Cloaked's source. Line numbers come from the Go function table.
 
+**About the addresses:** they are Ghidra program addresses, and Ghidra loads this library at image base `0x100000`. Subtract `0x100000` to get ELF virtual addresses for `objdump` or `readelf` (for example, `0x216f60` becomes `0x116f60`).
+
 The parameters were then confirmed **at runtime** in the web and extension builds (see `kdf-vectors.json`), and reproduced byte for byte by an independent implementation (`kdf-cost verify`).
 
 ## The Argon2id wrapper
@@ -50,4 +52,4 @@ The auth-key call site, for example (Ghidra's decompiler dropped these arguments
 
 ## Username hash constant
 
-`GenerateValidUsernameHash` writes a 32-byte ASCII constant into a buffer and uses it as the Argon2id salt for every user. The constant is in every shipped client, and its text says what it's for (a fixed salt for determinism). This write-up describes the construction but doesn't reproduce the constant or provide a ready-made hashing tool.
+`GenerateValidUsernameHash` writes a 32-byte ASCII constant into a buffer and uses it as the Argon2id salt for every user. The constant is in every shipped client. This write-up describes the construction but doesn't reproduce the constant or provide a ready-made hashing tool.
