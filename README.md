@@ -170,4 +170,4 @@ The web app also uses a passkey assertion with a browser-generated challenge for
 
 ## About
 
-Research and write-up by *[your name / link]*. Not affiliated with or endorsed by Cloaked. "Cloaked" is a trademark of its owner. Code in this repository is MIT licensed; the text is CC BY 4.0.
+Research and write-up by [Pranay Haldiya](https://github.com/PranayHaldiya). Not affiliated with or endorsed by Cloaked. "Cloaked" is a trademark of its owner. Code in this repository is MIT licensed; the text is CC BY 4.0.
