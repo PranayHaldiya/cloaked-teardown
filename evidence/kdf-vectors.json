@@ -1,0 +1,6 @@
+{
+  "password": "correct horse battery staple",
+  "account_salt": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+  "secret_box_key": "argon2id$v=19$m=65536$t=1$p=4$T=32$AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8$dXmkJiIjX7ouWR4DuZAUyDGG2uasgCOcS3a5PwMEkOI",
+  "auth_key": "argon2id$v=19$m=65536$t=5$p=4$T=32$AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8$7BJQi2ax8jIQatcfrdR8lDDDwDBnXKqQMrgngxfm5OY"
+}
